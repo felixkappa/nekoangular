@@ -1,0 +1,49 @@
+h3 {
+  color: #333;
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+p {
+  color: #555;
+  font-size: 1em;
+  margin-bottom: 0.5em;
+}
+
+.cat-gallery {
+  padding: 20px;
+  height: 90%;
+}
+
+.tarjetaRaza {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  padding: 16px;
+  margin: 20px;
+  width: 100%;
+  max-width: 400px;
+  transition: transform 0.3s;
+}
+
+.tarjetaRaza:hover {
+  transform: translateY(-5px);
+}
+
+.tarjetaRaza img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}
+
+.listaRazas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20px;
+}

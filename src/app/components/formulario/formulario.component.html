@@ -1,0 +1,34 @@
+<div class="contact-form-container">
+    <h2>Formulario de Contacto</h2>
+    <form >
+      <div>
+        <label for="nombre">Nombre:</label>
+        <input id="nombre" formControlName="nombre" type="text" placeholder="Tu nombre" />
+        <div *ngIf="contactoForm.get('nombre').invalid && contactoForm.get('nombre').touched">
+          <small *ngIf="contactoForm.get('nombre').hasError('required')">El nombre es requerido.</small>
+          <small *ngIf="contactoForm.get('nombre').hasError('minlength')">El nombre debe tener al menos 3 caracteres.</small>
+        </div>
+      </div>
+  
+      <div>
+        <label for="email">Correo electrónico:</label>
+        <input id="email" formControlName="email" type="email" placeholder="Tu correo electrónico" />
+        <div *ngIf="contactoForm.get('email').invalid && contactoForm.get('email').touched">
+          <small *ngIf="contactoForm.get('email').hasError('required')">El correo es requerido.</small>
+          <small *ngIf="contactoForm.get('email').hasError('email')">El correo no es válido.</small>
+        </div>
+      </div>
+  
+      <div>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" formControlName="mensaje" placeholder="Tu mensaje" rows="5"></textarea>
+        <div *ngIf="contactoForm.get('mensaje').invalid && contactoForm.get('mensaje').touched">
+          <small *ngIf="contactoForm.get('mensaje').hasError('required')">El mensaje es requerido.</small>
+          <small *ngIf="contactoForm.get('mensaje').hasError('minlength')">El mensaje debe tener al menos 10 caracteres.</small>
+        </div>
+      </div>
+  
+      <button>Enviar</button>
+    </form>
+  </div>
+  

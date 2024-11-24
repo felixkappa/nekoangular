@@ -1,0 +1,81 @@
+<div class="sobre-nosotros-container">
+    <h1>Sobre Nosotros</h1>
+  
+    <section class="introduccion">
+      <h2>Quiénes Somos</h2>
+      <p>Somos estudiantes de la carrera en ingeneria en sistemas computacionales</p>
+    </section>
+  
+    <section class="mision">
+      <h2>Nuestra Misión</h2>
+      <p>Buscamos mejorar nuestras habilidades en el sector de frontend el cual con la ayuda de apis y frameworks podremos completar nuestra meta</p>
+    </section>
+  
+    <section class="vision">
+      <h2>Nuestra Visión</h2>
+      <p>Lograr ser conocidos por varios programadores para ser un punto de partida para futuros programadores</p>
+    </section>
+  
+    <section class="valores">
+      <h2>Valores</h2>
+      <ul>
+        <li>Ser un referentes en la comunidad también significa ser ético en nuestro trabajo. Cumplir con los estándares de la industria, trabajar con integridad y ser responsable por el impacto del código que producimos es esencial.</li>
+      </ul>
+    </section>
+
+    <section class="introduccions">
+        <h2>Contactanos</h2>
+      </section>
+
+
+
+
+<!-- Contenedor principal de imágenes -->
+<div class="imagenes-container">
+    <!-- Imagen 1 -->
+    <div class="imagen-container">
+      <a href="https://www.facebook.com/lufwatschnell?locale=es_LA" target="_blank">
+      <img id="imagen1" src="./assets/img/gato_gris.PNG" alt="Imagen 1" 
+           onmouseover="cambiarImagen('imagen1', './assets/img/alejandro.PNG')" 
+           onmouseout="restaurarImagen('imagen1', './assets/img/gato_gris.PNG')">
+          </a>
+    </div>
+    
+    <!-- Imagen 2 -->
+    <div class="imagen-container">  
+      <a href="https://www.facebook.com/pepe.chavarria.7?locale=es_LA" target="_blank">
+      <img id="imagen2" src="./assets/img/gato_blanco.PNG" alt="Imagen 2" 
+           onmouseover="cambiarImagen('imagen2', './assets/img/santos.JPG')" 
+           onmouseout="restaurarImagen('imagen2', './assets/img/gato_blanco.PNG')">
+          </a>
+    </div>
+
+    <!-- Imagen 3 -->
+    <div class="imagen-container">
+      <a href="https://www.facebook.com/felix.mancinas.9/?locale=es_LA" target="_blank">
+      <img id="imagen3" src="./assets/img/gato_naranja.PNG" alt="Imagen 3" 
+           onmouseover="cambiarImagen('imagen3', './assets/img/felix.PNG')" 
+           onmouseout="restaurarImagen('imagen3', './assets/img/gato_naranja.PNG')">
+          </a>
+    </div>
+  </div>
+
+  <script>
+    function cambiarImagen(idImagen, nuevaSrc) {
+        const imagen = document.getElementById(idImagen);
+        if (imagen) {
+            imagen.src = nuevaSrc;
+        }
+    }
+
+    function restaurarImagen(idImagen, srcOriginal) {
+        const imagen = document.getElementById(idImagen);
+        if (imagen) {
+            imagen.src = srcOriginal;
+        }
+    }
+</script>
+
+
+  </div>
+  

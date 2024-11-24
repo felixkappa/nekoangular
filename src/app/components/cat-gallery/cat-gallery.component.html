@@ -1,0 +1,10 @@
+<div class="cat-gallery">
+  <h1>Galeria de gatos</h1>
+  <div *ngIf="error" class="error">{{ error }}</div>
+  <div class="listaRazas">
+    <div *ngFor="let breed of catBreeds" class="tarjetaRaza">
+      <h3>{{ breed.name }}</h3>
+      <img *ngIf="breed.image?.url" [src]="breed.image.url" alt="{{ breed.name }}" />
+    </div>
+  </div>
+</div>

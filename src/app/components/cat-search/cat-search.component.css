@@ -1,0 +1,79 @@
+/* Contenedor para busqueda */
+.contenedorBusqueda {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    height: 90%;
+  }
+  
+  input[type="text"] {
+    padding: 10px;
+    font-size: 1.2em;
+    width: 80%;
+    max-width: 500px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: border-color 0.3s;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    border-color: #005ca3;
+  }
+  
+  /* Contenedor de resultados */
+  .tarjetaRaza {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    padding: 16px;
+    margin: 20px;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s;
+  }
+  
+  .tarjetaRaza:hover {
+    transform: translateY(-5px);
+  }
+  
+  .tarjetaRaza img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  h3 {
+    color: #333;
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+  }
+  
+  p {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+  
+  /* Contenedor general */
+  .listaRazas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .examples {
+    text-align: center;
+    font-size: 1.1em;
+    color: #555;
+    margin-top: 20px;
+  }
+  
+  /* Mensaje si no hay resultados */
+  .sinResultados {
+    color: #777;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 20px;
+  }

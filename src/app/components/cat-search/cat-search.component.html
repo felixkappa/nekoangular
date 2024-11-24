@@ -1,0 +1,31 @@
+<h1>Busqueda de Razas de Gato con Cat API</h1>
+<div class="contenedorBusqueda">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (input)="onSearch()" 
+      placeholder="Buscar raza de gato..."
+    />
+  </div>
+  
+  <div *ngIf="!hasSearched" class="ejemplos">
+    <p>Ejemplos de razas populares: Siamese, Persian, Maine Coon, Bengal, Aegean, Abyssinian, Birman</p>
+  </div>
+  
+  <div *ngIf="hasSearched" class="contenedor">
+    <div *ngIf="filteredBreeds.length > 0; else noResults" class="listaRazas">
+      <div *ngFor="let breed of filteredBreeds" class="tarjetaRaza">
+        <h3>{{ breed.name }}</h3>
+        <p><strong>Temperamento:</strong> {{ breed.temperament }}</p>
+        <p><strong>Origen:</strong> {{ breed.origin }}</p>
+        <p><strong>Descripción:</strong> {{ breed.description }}</p>
+        <img *ngIf="breed.image?.url" [src]="breed.image.url" alt="{{ breed.name }}" />
+      </div>
+    </div>
+  </div>
+  
+  <ng-template #noResults>
+    <div class="sinResultados">
+      <p>No se encontraron resultados para "{{ searchQuery }}".</p>
+    </div>
+  </ng-template>
